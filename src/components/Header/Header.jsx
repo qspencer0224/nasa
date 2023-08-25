@@ -1,27 +1,38 @@
 import React from 'react'
+import './header.css'
+import check from '../../images/check.png'
 
 function Header() {
-  return (
-    <div id='headerWrapper'>
-      <div className="nasanav">
-        <div className="left">
-            <img src='https://cdn.discordapp.com/attachments/1128684937818681404/1144478289524695041/icon__arrow_back_outline_.png' alt='' id='left' />
+    return (
+        <div id='headerWrapper'>
+            <div className='nasaName'>
+                <p>nasa</p>
+                <img src={check} alt="verified" className='verified' />
+            </div>
+            {/*  */}
+            <div id='status'>
+                <div className='flex'>
+                    <img src="https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg" alt="nasa logo" className='logo' />
+                    <div>
+                    </div>
+                    <div className='rightDiv'>
+                        <div className='numbers'>
+                            <p>3,940</p>
+                            <p>Posts</p>
+                        </div>
+                        <div className='numbers'>
+                            <p>95.2M</p>
+                            <p>Followers</p>
+                        </div>
+                        <div className='numbers'>
+                            <p>77</p>
+                            <p>Following</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div className="name">nasa</div>
-        <div className="check">
-            <img src='https://cdn.discordapp.com/attachments/1128684937818681404/1144478289830871040/image_1.png' alt='' id='check' />
-        </div>
-        <div className="dots">
-            <img src='' alt='' id='dots' />
-        </div>
-      </div>
-      <div className="socials"></div>
-      <div className="bio"></div>
-      <div className="link"></div>
-      <div className="followers"></div>
-      <div className="buttons"></div>
-    </div>
-  )
+    )
 }
 
 export default Header

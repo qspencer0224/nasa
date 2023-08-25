@@ -91,39 +91,38 @@ body {
 .dots{
   border: solid yellow;
 }
-.instaicon{
-  width: 20%;
-  margin: 10px;
+#footerWrapper {
+  /* border: solid white; */
+  padding: 12px;
+  display: flex;
+  justify-content: space-evenly;
 }
-#instaicon{
-  height: 100%;
+#icon {
+  height: 30px;
 }
-.nasaicon{
-  width: 20%;
-  margin: 10px;
+#status p {
+  color: #fff;
 }
-#nasaicon{
-  height: 100%;
+.flex {
+  display: flex;
+  justify-content: space-between;
 }
-.xicon{
-  width: 20%;
-  margin: 10px;
+
+.rightDiv {
+  color: #fff;
+  display: flex;
+  margin-left: 50px;
+  align-items: center;
 }
-#xicon{
-  height: 100%;
+.numbers {
+  margin-right: 10px;
+  text-align: center;
 }
-.yticon{
-  width: 20%;
-  margin: 10px;
+.numbers p{
+  font-size: 15px;
 }
-#yticon{
-  height: 100%;
-  width: 100%;
-}
-.giticon{
-  margin: 10px;
-  width: 20%;
-}
-#giticon{
-  height: 100%;
+
+.story {
+  color: #fff;
+  margin-left: 15px;
 }
