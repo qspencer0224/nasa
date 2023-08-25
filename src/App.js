@@ -1,40 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
-import axios from 'axios';
 import { useEffect, useState } from 'react';
-import NasaPics from './models/NasaPics';
+import key from './API/key'
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
+ const [imgData, setImgData] = useState([0])
 
- const [nasa, setNasa] = useState("")
-
- const key = "a7cDqjKpVnGECUEkl68ByGftlrbHfmE6PkzJgVSS"
+ const apikey = key
 
  const getImage = async () =>{
-  const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${key}`);
+  const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${apikey}&count=10`);
   const data = await response.json();
   console.log(data);
-    
-    setNasa(data)
+    setImgData(data)
  }
 
  useEffect(() =>{
   getImage()
  }, [])
 
-
-
-
   return (
     <div className="App">
-      <h1>Hello World</h1>
-        <NasaPics />
-        <img src={nasa.url} />
-        <h1>{nasa.title}</h1>
-        {nasa.explanation}
+        <Header />
+        <div className='imageWrapper'>
+            {imgData.map((img,i) => {
+                return (
+                    <div key={i} className='nasaImages'>
+                        <div className='captions'>
+                            <h3>{img.title}</h3>
+                            <p>{img.copyright}</p>
+                            <p>{img.date}</p>
+                        </div>
+                        <img src={img.url} alt='NASA images' className='imageSize' />
+                    </div>
+                )
+            })}
+        </div>
+      <Footer />
     </div>
   );
 }
+
 
 export default App;

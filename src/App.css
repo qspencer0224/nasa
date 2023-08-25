@@ -1,38 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+body {
+  /* border: solid orange; */
+  width: 385px;
+  height: 844px;
+  background-color: #110f0f;
+  display: flex;
+  justify-content: center;
+}
 .App {
+  /* border: solid blue; */
+  width: 385px;
+}
+
+/* image cards */
+.imageWrapper {
+  /* border: solid hotpink; */
+  /* margin-top: 100px; */
+  width: 390px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+.nasaImages {
+  border: .5px solid #110f0f;
+}
+
+.imageSize {
+  width: 127px;
+  height: 120px;
+  object-fit: cover;
+}
+
+#headerWrapper {
+  border: solid red;
+  height: 210px;
+}
+
+#footerWrapper {
+  display: flex;
+  border: solid white;
+  height: 70px;
+  justify-content: space-evenly;
+}
+.nasanav{
+  border: solid lightblue;
+  height: 25px;
+  display: flex;
+}
+.socials{
+  border: solid purple;
+  height: 60px;
+}
+.bio{
+  border: solid blue;
+  height: 25px;
+}
+.link{
+  border: solid lime;
+  height: 15px;
+}
+.followers{
+  border: solid orange;
+  height: 25px;
+}
+.left{
+  height: 100%;
+  width: 33%;
+}
+#left{
+  height: 100%;
+}
+.name{
+  border: solid pink;
+  color: white;
+  font-weight: bold;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.check{
+  height: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#check{
+  height: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.dots{
+  border: solid yellow;
 }
-
-.App-link {
-  color: #61dafb;
+.instaicon{
+  width: 20%;
+  margin: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#instaicon{
+  height: 100%;
+}
+.nasaicon{
+  width: 20%;
+  margin: 10px;
+}
+#nasaicon{
+  height: 100%;
+}
+.xicon{
+  width: 20%;
+  margin: 10px;
+}
+#xicon{
+  height: 100%;
+}
+.yticon{
+  width: 20%;
+  margin: 10px;
+}
+#yticon{
+  height: 100%;
+  width: 100%;
+}
+.giticon{
+  margin: 10px;
+  width: 20%;
+}
+#giticon{
+  height: 100%;
 }
